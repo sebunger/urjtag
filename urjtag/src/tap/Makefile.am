@@ -57,6 +57,11 @@ libtap_la_SOURCES += \
 	cable/arcom.c
 endif
 
+if ENABLE_CABLE_ASPO
+libtap_la_SOURCES += \
+	cable/aspo.c
+endif
+
 if ENABLE_CABLE_BYTEBLASTER
 libtap_la_SOURCES += \
 	cable/byteblaster.c

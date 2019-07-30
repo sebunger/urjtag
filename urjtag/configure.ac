@@ -655,6 +655,7 @@ URJ_DRIVER_SET([bus], [
 # Enable cable drivers
 URJ_DRIVER_SET([cable], [
 	arcom
+	aspo
 	byteblaster
 	dirtyjtag
 	dlc5

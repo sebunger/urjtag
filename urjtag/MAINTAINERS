@@ -43,6 +43,11 @@ ARCOM CABLE DRIVER
 F:      src/tap/cable/arcom.c
 S:      Orphan
 
+ASPO CABLE DRIVER
+M:      Karl Hammar <karl at aspodata.se>
+F:      src/tap/cable/aspo.c
+S:      Tested
+
 AU1500 BUS DRIVER
 F:      src/bus/au1500.c
 S:      Orphan

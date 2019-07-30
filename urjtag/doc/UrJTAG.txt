@@ -206,6 +206,7 @@ See 'help cable' command for up-to-date info.
 Parallel-port cables:
 
  * Arcom JTAG Cable
+ * Aspo JTAG Cable (experimental) http://aspodata.se/git/openhw/boards_other/isp/ pp_jtag_arm20.{sch,pcb}
  * Altera ByteBlaster/ByteBlaster II/ByteBlasterMV Parallel Port Download Cable
  * Xilinx DLC5 JTAG Parallel Cable III
  * ETC EA253 JTAG Cable

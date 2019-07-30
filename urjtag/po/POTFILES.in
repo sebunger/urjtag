@@ -107,6 +107,7 @@ src/svf/svf_bison.y
 src/svf/svf.c
 src/svf/svf_flex.l
 src/tap/cable/arcom.c
+src/tap/cable/aspo.c
 src/tap/cable/byteblaster.c
 src/tap/cable.c
 src/tap/cable/dlc5.c

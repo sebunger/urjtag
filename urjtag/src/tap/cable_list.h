@@ -30,6 +30,9 @@
 #ifdef ENABLE_CABLE_ARCOM
 _URJ_CABLE(arcom)
 #endif
+#ifdef ENABLE_CABLE_ASPO
+_URJ_CABLE(aspo)
+#endif
 #ifdef ENABLE_CABLE_BYTEBLASTER
 _URJ_CABLE(byteblaster)
 #endif
