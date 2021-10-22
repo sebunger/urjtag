@@ -1,0 +1,36 @@
+#!/usr/bin/make -f
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/autotools.mk
+include /usr/share/cdbs/1/rules/utils.mk
+
+# We must first call ./autogen.sh to generate the autotools stuff.
+post-patches:: debian/stamp-autothings-update
+debian/stamp-autothings-update:
+	./autogen.sh
+	touch $@
+
+post-patches::
+	@# Make autotools scripts executable.
+	chmod 755 configure tools/config.rpath
+
+clean::
+	rm -f debian/stamp-autothings-update
+	@# Delete generated files, we don't want them in the diff.
+	rm -f tools/* INSTALL src/cmd/generated_cmd_list.h.stamp config.h.in~
+	rm -f configure ABOUT-NLS aclocal.m4 config.h.in po/stamp-po po/*.gmo
+	rm -f po/Rules-quot po/en@boldquot.header po/Makevars.template
+	rm -f po/en@quot.header po/Makefile.in.in po/boldquot.sed po/urjtag.pot
+	rm -f po/quot.sed po/remove-potcdate.sin po/insert-header.sin
+	rm -rf m4
+	find . -name Makefile.in -delete
+	rm -f src/bsdl/bsdl_bison.c src/bsdl/bsdl_bison.h src/bsdl/bsdl_flex.c
+	rm -f src/bsdl/vhdl_bison.c src/bsdl/vhdl_bison.h src/bsdl/vhdl_flex.c
+	rm -f src/svf/svf_bison.c src/svf/svf_bison.h src/svf/svf_flex.c
+	rm -f src/cmd/generated_cmd_list.h
+	@# Restore original .po files, they were modified during the build.
+	cp -f debian/po/*.po po
+
+# For /usr/share/cdbs/1/rules/utils.mk sanity check.
+common-binary-post-install-arch:: list-missing
+

@@ -1,0 +1,54 @@
+urjtag (0.10+r2007-1.2build2) disco; urgency=medium
+
+  * No-change rebuild for readline soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Mon, 14 Jan 2019 20:05:02 +0000
+
+urjtag (0.10+r2007-1.2build1) yakkety; urgency=medium
+
+  * No-change rebuild for readline soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sat, 17 Sep 2016 12:11:08 +0000
+
+urjtag (0.10+r2007-1.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * debian/patches/0010_prefix_REG.patch: (Closes: #756827)
+    - Prefix all REG_* with BFIN_REG to not clash with enumerators defined in
+     /usr/include/sys/ucontext.h, this fixes
+     FTBFS: error: redeclaration of enumerator 'REG_R0'
+
+ -- Andreas Moog <andreas.moog@warperbbs.de>  Fri, 12 Sep 2014 20:43:07 +0200
+
+urjtag (0.10+r2007-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Apply patch from upstream git to build with bison 3.x. This fixes
+    FTBFS: error: too few arguments to function 'urj_svf_lex'
+    (Closes: #733355)
+
+ -- Andreas Moog <andreas.moog@warperbbs.de>  Wed, 19 Feb 2014 21:50:12 +0100
+
+urjtag (0.10+r2007-1) unstable; urgency=low
+
+  * New upstream release.
+    + Fixes "jtag crashes with nexys2 board" (Closes: #565660).
+  * Standards-Version: 3.9.2 (no changes required).
+  * debian/docs: Add doc/README.stapl and doc/README.pld.
+
+ -- Uwe Hermann <uwe@debian.org>  Fri, 21 Oct 2011 23:47:06 +0200
+
+urjtag (0.10-1) unstable; urgency=low
+
+  * New upstream release (Closes: #570158).
+  * Standards-Version: 3.9.0.
+    + Don't refer to deprecated /usr/share/common-licenses/BSD.
+  * Change build-dep: libreadline5-dev -> libreadline-dev (Closes: #553882).
+
+ -- Uwe Hermann <uwe@debian.org>  Sun, 11 Jul 2010 01:00:12 +0200
+
+urjtag (0.0+r1476-1) unstable; urgency=low
+
+  * Initial release (Closes: #468328).
+
+ -- Uwe Hermann <uwe@debian.org>  Mon, 06 Apr 2009 14:01:42 +0200

@@ -1,0 +1,44 @@
+Description: Apply patch from upstream git to build with bison 3.x. This fixes
+ FTBFS: error: too few arguments to function 'urj_svf_lex'
+Author: Mike Frysinger
+Bug-Debian: http://bugs.debian.org/733355
+Origin: upstream, http://sourceforge.net/p/urjtag/git/ci/013b86ebe32bacfa54a2aeb226cf1910abdcbfe1/
+
+--- urjtag-0.10+r2007.orig/src/bsdl/bsdl_bison.y
++++ urjtag-0.10+r2007/src/bsdl/bsdl_bison.y
+@@ -119,8 +119,9 @@ LEGAL NOTICES:
+ 
+ %pure-parser
+ %parse-param {urj_bsdl_parser_priv_t *priv_data}
++%lex-param {urj_bsdl_parser_priv_t *priv_data}
+ %defines
+-%name-prefix="urj_bsdl_"
++%name-prefix "urj_bsdl_"
+ 
+ %{
+ #include <stdlib.h>
+--- urjtag-0.10+r2007.orig/src/bsdl/vhdl_bison.y
++++ urjtag-0.10+r2007/src/bsdl/vhdl_bison.y
+@@ -119,8 +119,9 @@ LEGAL NOTICES:
+ 
+ %pure-parser
+ %parse-param {urj_vhdl_parser_priv_t *priv_data}
++%lex-param {urj_vhdl_parser_priv_t *priv_data}
+ %defines
+-%name-prefix="urj_vhdl_"
++%name-prefix "urj_vhdl_"
+ 
+ %{
+ #include <stdlib.h>
+--- urjtag-0.10+r2007.orig/src/svf/svf_bison.y
++++ urjtag-0.10+r2007/src/svf/svf_bison.y
+@@ -27,7 +27,8 @@
+ %pure-parser
+ %parse-param {urj_svf_parser_priv_t *priv_data}
+ %parse-param {urj_chain_t *chain}
+-%name-prefix="urj_svf_"
++%lex-param {urj_chain_t *chain}
++%name-prefix "urj_svf_"
+ %locations
+ 
+ %{
