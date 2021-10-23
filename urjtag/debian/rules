@@ -28,8 +28,6 @@ clean::
 	rm -f src/bsdl/vhdl_bison.c src/bsdl/vhdl_bison.h src/bsdl/vhdl_flex.c
 	rm -f src/svf/svf_bison.c src/svf/svf_bison.h src/svf/svf_flex.c
 	rm -f src/cmd/generated_cmd_list.h
-	@# Restore original .po files, they were modified during the build.
-	cp -f debian/po/*.po po
 
 # For /usr/share/cdbs/1/rules/utils.mk sanity check.
 common-binary-post-install-arch:: list-missing
