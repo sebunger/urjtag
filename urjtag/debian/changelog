@@ -1,4 +1,4 @@
-urjtag (2021.03-ppa1) UNRELEASED; urgency=medium
+urjtag (2021.03-0focal+ppa1) focal; urgency=medium
 
   * Updated sources from upstream git tag.
   * Updated patches
