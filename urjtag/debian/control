@@ -4,7 +4,8 @@ Priority: extra
 Maintainer: Sebastian Unger <sebunger44@gmail.com>
 Build-Depends: cdbs, debhelper (>= 7.0.50~), autotools-dev, libreadline-dev,
  libusb-1.0-0-dev, libftdi-dev, gettext (>= 0.14.1), flex (>= 2.5.33), 
- autoconf, automake, libtool, autopoint, pkg-config, bison
+ autoconf, automake, libtool, autopoint, pkg-config, bison, python3-distutils,
+ python3-dev
 Standards-Version: 3.9.2
 Homepage: http://www.urjtag.org/
 
