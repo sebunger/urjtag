@@ -2,6 +2,7 @@ urjtag (2021.03-ppa1) UNRELEASED; urgency=medium
 
   * Updated sources from upstream git tag.
   * Updated patches
+  * Updated libusb dependency to libusb1
 
  -- Sebastian Unger <sebunger44@gmail.com>  Sat, 23 Oct 2021 11:45:40 +1300
 
